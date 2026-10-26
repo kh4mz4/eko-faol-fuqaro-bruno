@@ -1,0 +1,60 @@
+info:
+  name: yaratish
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{base_url}}/directory/web/on_boarding/create_on_boarding"
+  headers:
+    - name: Authorization
+      value: Bearer {{staff_token}}
+  body:
+    type: multipart-form
+    data:
+      - name: text_uz
+        type: text
+        value: test
+      - name: text_ru
+        type: text
+        value: test
+      - name: text_en
+        type: text
+        value: test
+      - name: text_crl
+        type: text
+        value: test
+      - name: banner_uz
+        type: file
+        value:
+          - C:\Users\HR\OneDrive\Pictures\Screenshots\Screenshot 2026-05-17 133546.png
+        contentType: image/png
+      - name: banner_ru
+        type: file
+        value:
+          - C:\Users\HR\OneDrive\Pictures\Screenshots\Screenshot 2026-05-17 133546.png
+        contentType: image/png
+      - name: banner_en
+        type: file
+        value:
+          - C:\Users\HR\OneDrive\Pictures\Screenshots\Screenshot 2026-05-17 133546.png
+        contentType: image/png
+      - name: banner_crl
+        type: file
+        value:
+          - C:\Users\HR\OneDrive\Pictures\Screenshots\Screenshot 2026-05-17 133546.png
+        contentType: image/png
+      - name: index
+        type: text
+        value: "1"
+      - name: is_active
+        type: text
+        value: "true"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

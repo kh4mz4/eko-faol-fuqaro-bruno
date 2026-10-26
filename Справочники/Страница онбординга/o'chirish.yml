@@ -1,0 +1,19 @@
+info:
+  name: o'chirish
+  type: http
+  seq: 4
+
+http:
+  method: DELETE
+  url: "{{base_url}}/directory/web/on_boarding/delete_on_boarding/{{on_boarding_uuid}}"
+  headers:
+    - name: Authorization
+      value: Bearer {{staff_token}}
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

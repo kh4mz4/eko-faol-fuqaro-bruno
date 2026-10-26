@@ -1,0 +1,7 @@
+info:
+  name: Часто задаваемые вопросы
+  type: folder
+  seq: 3
+
+request:
+  auth: inherit

@@ -1,0 +1,52 @@
+info:
+  name: o'zgartirish
+  type: http
+  seq: 3
+
+http:
+  method: PATCH
+  url: "{{base_url}}/directory/web/on_boarding/update_on_boarding/"
+  headers:
+    - name: Authorization
+      value: Bearer {{staff_token}}
+  body:
+    type: multipart-form
+    data:
+      - name: text_uz
+        type: text
+        value: ""
+      - name: text_ru
+        type: text
+        value: ""
+      - name: text_en
+        type: text
+        value: ""
+      - name: text_crl
+        type: text
+        value: ""
+      - name: banner_uz
+        type: text
+        value: ""
+      - name: banner_ru
+        type: text
+        value: ""
+      - name: banner_en
+        type: text
+        value: ""
+      - name: banner_crl
+        type: text
+        value: ""
+      - name: index
+        type: text
+        value: ""
+      - name: is_active
+        type: text
+        value: ""
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

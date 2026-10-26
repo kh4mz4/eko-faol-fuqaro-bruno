@@ -1,0 +1,29 @@
+info:
+  name: o'zgartirish
+  type: http
+  seq: 2
+
+http:
+  method: PATCH
+  url: "{{base_url}}/directory/web/tree/update_tree_type/{{tree_type_uuid}}"
+  headers:
+    - name: Authorization
+      value: Bearer {{staff_token}}
+  body:
+    type: json
+    data: |-
+      {
+        "title_uz": "Mevali daraxt",
+        "title_ru": "Плодовое дерево",
+        "title_crl": "Мевали дарахт",
+        "title_en": "Fruit tree",
+        "point": 1
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

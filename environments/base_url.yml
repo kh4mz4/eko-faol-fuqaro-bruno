@@ -15,3 +15,9 @@ variables:
   - name: permission_uuid
     value: 01a17440-8c5f-70cf-9ea7-32867b715368
     description: ""
+  - name: on_boarding_uuid
+    value: 01a1775d-bbfa-76dc-a4bf-1a50c550e4b9
+    description: ""
+  - name: tree_type_uuid
+    value: 01a0ed19-11a3-7464-95e0-f179363552c0
+    description: ""
