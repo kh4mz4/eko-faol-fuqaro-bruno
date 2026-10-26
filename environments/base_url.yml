@@ -21,3 +21,9 @@ variables:
   - name: tree_type_uuid
     value: 01a0ed19-11a3-7464-95e0-f179363552c0
     description: ""
+  - name: step_uuid
+    value: 01a177a7-e08f-7fc4-99b6-7c0e923e2d1c
+    description: ""
+  - name: client_uuid
+    value: a6f9ec12-d0d2-443e-a0c1-80e4a9c4984c
+    description: ""

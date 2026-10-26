@@ -1,0 +1,7 @@
+info:
+  name: Детали реестр граждан
+  type: folder
+  seq: 3
+
+request:
+  auth: inherit
