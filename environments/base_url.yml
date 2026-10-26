@@ -1,0 +1,17 @@
+name: base_url
+variables:
+  - name: base_url
+    value: http://zkteam.uz:2110/api/v1
+    description: ""
+  - name: staff_token
+    value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGFmZiI6IjAxYTBlN2FkLTA2ODItNzc4YS1iZWI0LWU1NWMzMjc1NDE1OSIsInRva2VuX3R5cGUiOiJhY2Nlc3MiLCJleHAiOjE3OTMwMzE0NDQuMDAyMjc1LCJpYXQiOjE3OTI5NDUwNDQuMDAyMjk4LCJqdGkiOiIwMWExNzNkYS0zYTIyLTc3ZTctODg5MC03MzJlYzMxY2UyMTQifQ.wWdJL4YsITdZGFhruAv5y3BwgFNE5_DZn32K_pAfwkA
+    description: ""
+  - name: staff_uuid
+    value: 01a17402-da91-7412-a374-e2a2f0a856b3
+    description: ""
+  - name: role_uuid
+    value: 01a17440-8be4-743a-8c12-cd4cc3ab80da
+    description: ""
+  - name: permission_uuid
+    value: 01a17440-8c5f-70cf-9ea7-32867b715368
+    description: ""

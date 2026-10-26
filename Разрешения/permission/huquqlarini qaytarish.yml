@@ -1,0 +1,25 @@
+info:
+  name: huquqlarini qaytarish
+  type: http
+  seq: 3
+
+http:
+  method: PATCH
+  url: "{{base_url}}/staff/web/permission/update_permission/{{role_uuid}}"
+  headers:
+    - name: Authorization
+      value: Bearer {{staff_token}}
+  body:
+    type: json
+    data: |-
+      {
+        "status": "back"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

@@ -1,0 +1,34 @@
+info:
+  name: Foydalanuvchi ro'yxati
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{base_url}}/staff/web/staff/list_staff?page=1&page_size=10"
+  headers:
+    - name: Authorization
+      value: Bearer {{staff_token}}
+  params:
+    - name: page
+      value: "1"
+      type: query
+    - name: page_size
+      value: "10"
+      type: query
+    - name: search
+      value: nurik
+      type: query
+      disabled: true
+    - name: is_active
+      value: "false"
+      type: query
+      disabled: true
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

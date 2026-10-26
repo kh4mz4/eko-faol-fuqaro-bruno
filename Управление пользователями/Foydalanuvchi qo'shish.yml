@@ -1,0 +1,57 @@
+info:
+  name: Foydalanuvchi qo'shish
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{base_url}}/staff/web/staff/create_staff"
+  headers:
+    - name: Authorization
+      value: Bearer {{staff_token}}
+  body:
+    type: multipart-form
+    data:
+      - name: username
+        type: text
+        value: nurik
+      - name: password
+        type: text
+        value: qwerty123
+      - name: avatar
+        type: file
+        value:
+          - C:\Users\HR\OneDrive\Pictures\Screenshots\Screenshot 2026-05-17 133546.png
+        contentType: image/png
+        disabled: true
+      - name: is_active
+        type: text
+        value: "true"
+      - name: phone_number
+        type: text
+        value: "9022128211"
+        disabled: true
+      - name: first_name
+        type: text
+        value: ""
+        disabled: true
+      - name: last_name
+        type: text
+        value: ""
+        disabled: true
+      - name: middle_name
+        type: text
+        value: ""
+        disabled: true
+      - name: role_uuid
+        type: text
+        value: ""
+        disabled: true
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

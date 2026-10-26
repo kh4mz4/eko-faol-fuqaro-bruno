@@ -1,0 +1,19 @@
+info:
+  name: Foydalanuvchi o'chirish
+  type: http
+  seq: 4
+
+http:
+  method: DELETE
+  url: "{{base_url}}/staff/web/staff/delete_staff/{{staff_uuid}}"
+  headers:
+    - name: Authorization
+      value: Bearer {{staff_token}}
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

@@ -1,0 +1,29 @@
+info:
+  name: "{{base_url}}/staff/web/role/get_role"
+  type: http
+  seq: 4
+
+http:
+  method: PATCH
+  url: "{{base_url}}/staff/web/role/delete_role/{{role_uuid}}"
+  headers:
+    - name: Authorization
+      value: Bearer {{staff_token}}
+  body:
+    type: json
+    data: |-
+      {
+        "unique_name": "operator",
+        "name": {
+          "additionalProp1": {}
+        },
+        "is_active": false
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
