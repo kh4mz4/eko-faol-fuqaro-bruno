@@ -9,6 +9,18 @@ http:
   headers:
     - name: Authorization
       value: Bearer {{staff_token}}
+  body:
+    type: json
+    data: |
+      {
+        "status": "APPROVED" // tastiqlansa
+      }
+      // {
+      //   "status": "REJECTED"  // rad etilsa
+      // }
+      // {
+      //   "status": "ARCHIVED" // arxivga olish
+      // }
   auth: inherit
 
 settings:

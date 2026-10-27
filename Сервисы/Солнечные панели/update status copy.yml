@@ -1,0 +1,31 @@
+info:
+  name: update status copy
+  type: http
+  seq: 2
+
+http:
+  method: PATCH
+  url: "{{base_url}}/task/web/solar_panel/update_solar_panel/{{solar_panel_uuid}}"
+  headers:
+    - name: Authorization
+      value: Bearer {{staff_token}}
+  body:
+    type: json
+    data: |
+      {
+        "status": "APPROVED" // tastiqlansa
+      }
+      // {
+      //   "status": "REJECTED"  // rad etilsa
+      // }
+      // {
+      //   "status": "ARCHIVED" // arxivga olish
+      // }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
