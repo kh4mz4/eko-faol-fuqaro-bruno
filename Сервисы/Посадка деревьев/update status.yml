@@ -1,0 +1,19 @@
+info:
+  name: update status
+  type: http
+  seq: 2
+
+http:
+  method: PATCH
+  url: "{{base_url}}/task/web/tree/update_tree_update/{{tree_uuid}}"
+  headers:
+    - name: Authorization
+      value: Bearer {{staff_token}}
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

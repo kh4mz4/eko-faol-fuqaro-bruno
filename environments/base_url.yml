@@ -4,7 +4,7 @@ variables:
     value: http://zkteam.uz:2110/api/v1
     description: ""
   - name: staff_token
-    value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGFmZiI6IjAxYTBlN2FkLTA2ODItNzc4YS1iZWI0LWU1NWMzMjc1NDE1OSIsInRva2VuX3R5cGUiOiJhY2Nlc3MiLCJleHAiOjE3OTMwODc2MzMuMjkwNTU3LCJpYXQiOjE3OTMwMDEyMzMuMjkwNjIxLCJqdGkiOiIwMWExNzczMy05YjhhLTc2MjMtYjM3Ny00Njk4ZjRjY2ZjZDIifQ.p9g-JApQbQzUz82FAVEhjzqLkxpsv_pwgCMHjXSuARY
+    value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGFmZiI6IjAxYTBlN2FkLTA2ODItNzc4YS1iZWI0LWU1NWMzMjc1NDE1OSIsInRva2VuX3R5cGUiOiJhY2Nlc3MiLCJleHAiOjE3OTMxNzYxNzEuODM2NTAyLCJpYXQiOjE3OTMwODk3NzEuODM2NTI2LCJqdGkiOiIwMWExN2M3YS05OTNjLTcwYjktYWQyOS1mNTAyZDA5YThhYzYifQ.Bz4EJAgJ5Bo6ov95S0i2pGFZeCS1haMG_LAmJpjlmDQ
     description: ""
   - name: staff_uuid
     value: 01a17402-da91-7412-a374-e2a2f0a856b3
@@ -26,4 +26,7 @@ variables:
     description: ""
   - name: client_uuid
     value: a6f9ec12-d0d2-443e-a0c1-80e4a9c4984c
+    description: ""
+  - name: tree_uuid
+    value: 01a17c13-0c3f-7c23-88ce-84d002c031f3
     description: ""
