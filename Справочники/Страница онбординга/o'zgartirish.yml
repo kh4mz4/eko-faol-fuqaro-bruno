@@ -5,7 +5,7 @@ info:
 
 http:
   method: PATCH
-  url: "{{base_url}}/directory/web/on_boarding/update_on_boarding/"
+  url: "{{base_url}}/directory/web/on_boarding/update_on_boarding/{{on_boarding_uuid}}"
   headers:
     - name: Authorization
       value: Bearer {{staff_token}}
