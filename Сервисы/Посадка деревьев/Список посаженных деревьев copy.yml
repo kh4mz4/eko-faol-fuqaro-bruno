@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: "{{base_url}}/task/web/tree/tree?page=1&page_size=10"
+  url: "{{base_url}}/task/web/tree/get_tree_list?page=1&page_size=10"
   headers:
     - name: Authorization
       value: Bearer {{staff_token}}

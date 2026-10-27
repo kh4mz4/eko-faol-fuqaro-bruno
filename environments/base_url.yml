@@ -10,7 +10,7 @@ variables:
     value: 01a17402-da91-7412-a374-e2a2f0a856b3
     description: ""
   - name: role_uuid
-    value: 01a17440-8be4-743a-8c12-cd4cc3ab80da
+    value: 01a15834-276d-76ed-8879-c22b0fd15c02
     description: ""
   - name: permission_uuid
     value: 01a17440-8c5f-70cf-9ea7-32867b715368
