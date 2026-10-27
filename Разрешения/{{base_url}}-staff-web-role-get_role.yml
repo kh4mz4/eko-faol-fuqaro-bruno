@@ -5,7 +5,7 @@ info:
 
 http:
   method: PATCH
-  url: "{{base_url}}/staff/web/role/delete_role/{{role_uuid}}"
+  url: "{{base_url}}/staff/web/role/update_role/{{role_uuid}}"
   headers:
     - name: Authorization
       value: Bearer {{staff_token}}
