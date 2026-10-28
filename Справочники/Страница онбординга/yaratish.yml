@@ -21,6 +21,7 @@ http:
       - name: text_en
         type: text
         value: test
+        disabled: true
       - name: text_crl
         type: text
         value: test
@@ -39,6 +40,7 @@ http:
         value:
           - C:\Users\HR\OneDrive\Pictures\Screenshots\Screenshot 2026-05-17 133546.png
         contentType: image/png
+        disabled: true
       - name: banner_crl
         type: file
         value:

@@ -5,7 +5,7 @@ info:
 
 http:
   method: PATCH
-  url: "{{base_url}}/staff/web/staff/update_staff/{{staff_uuid}}"
+  url: "{{base_url}}/staff/web/staff/update_staff/01a0e7ad-0682-778a-beb4-e55c32754159"
   headers:
     - name: Authorization
       value: Bearer {{staff_token}}
@@ -15,6 +15,7 @@ http:
       - name: username
         type: text
         value: nurik1
+        disabled: true
       - name: password
         type: text
         value: ""
@@ -42,6 +43,10 @@ http:
       - name: avatar
         type: text
         value: ""
+        disabled: true
+      - name: role_uuid
+        type: text
+        value: 01a15834-276d-76ed-8879-c22b0fd15c02
         disabled: true
   auth: inherit
 

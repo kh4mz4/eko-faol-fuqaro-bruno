@@ -4,7 +4,7 @@ variables:
     value: http://zkteam.uz:2110/api/v1
     description: ""
   - name: staff_token
-    value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGFmZiI6IjAxYTBlN2FkLTA2ODItNzc4YS1iZWI0LWU1NWMzMjc1NDE1OSIsInRva2VuX3R5cGUiOiJhY2Nlc3MiLCJleHAiOjE3OTMxNzYxNzEuODM2NTAyLCJpYXQiOjE3OTMwODk3NzEuODM2NTI2LCJqdGkiOiIwMWExN2M3YS05OTNjLTcwYjktYWQyOS1mNTAyZDA5YThhYzYifQ.Bz4EJAgJ5Bo6ov95S0i2pGFZeCS1haMG_LAmJpjlmDQ
+    value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGFmZiI6IjAxYTBlN2FkLTA2ODItNzc4YS1iZWI0LWU1NWMzMjc1NDE1OSIsInRva2VuX3R5cGUiOiJhY2Nlc3MiLCJleHAiOjE3OTMyNjM1MTQuNDUxNDQzLCJpYXQiOjE3OTMxNzcxMTQuNDUxNTA1LCJqdGkiOiIwMWExODFhZi01NzUzLTc0MGEtODFkOS0zNjk2ODgxN2IyOTMifQ.ZJ12b-KSfC4jVf-iswkvb9OE9P80_HOrTi-rHwJX7Pw
     description: ""
   - name: staff_uuid
     value: 01a17402-da91-7412-a374-e2a2f0a856b3
@@ -32,4 +32,7 @@ variables:
     description: ""
   - name: solar_panel_uuid
     value: 01a17c9b-4cd8-7fda-a040-589d84e3c52b
+    description: ""
+  - name: car_uuid
+    value: 01a181fe-1764-7fd4-96ca-fc45cff60461
     description: ""
