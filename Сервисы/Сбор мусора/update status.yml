@@ -1,0 +1,25 @@
+info:
+  name: update status
+  type: http
+  seq: 2
+
+http:
+  method: PATCH
+  url: "{{base_url}}/task/web/trash/update_trash/{{trash_uuid}}"
+  headers:
+    - name: Authorization
+      value: Bearer {{staff_token}}
+  body:
+    type: json
+    data: |-
+      {
+        "status": "APPROVED"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
