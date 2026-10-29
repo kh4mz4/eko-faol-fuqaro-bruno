@@ -1,0 +1,34 @@
+info:
+  name: Untitled
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{base_url}}/directory/web/administrative_unit/create_administrative_unit"
+  headers:
+    - name: Authorization
+      value: Bearer {{staff_token}}
+  body:
+    type: multipart-form
+    data:
+      - name: name_uz
+        type: text
+        value: string
+      - name: name_ru
+        type: text
+        value: str
+      - name: name_crl
+        type: text
+        value: str
+      - name: soato
+        type: text
+        value: dstr
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

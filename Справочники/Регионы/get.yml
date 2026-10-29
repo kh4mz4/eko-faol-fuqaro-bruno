@@ -1,0 +1,30 @@
+info:
+  name: get
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{base_url}}/directory/web/administrative_unit/get_administrative_unit?page=1&page_size=10"
+  headers:
+    - name: Authorization
+      value: Bearer   {{staff_token}}
+  params:
+    - name: parent_uuid
+      value: asd
+      type: query
+      disabled: true
+    - name: page
+      value: "1"
+      type: query
+    - name: page_size
+      value: "10"
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

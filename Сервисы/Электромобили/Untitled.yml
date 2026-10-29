@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: "{{base_url}}/task/web/car/get_car_list?page=1&page_size=10"
+  url: "{{base_url}}/task/web/car/get_car_list?page=1&page_size=1"
   headers:
     - name: Authorization
       value: Bearer {{staff_token}}
@@ -14,7 +14,7 @@ http:
       value: "1"
       type: query
     - name: page_size
-      value: "10"
+      value: "1"
       type: query
   auth: inherit
 
