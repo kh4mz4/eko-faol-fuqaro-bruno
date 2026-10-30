@@ -1,0 +1,19 @@
+info:
+  name: delete copy
+  type: http
+  seq: 2
+
+http:
+  method: DELETE
+  url: "{{base_url}}/directory/web/privacy_policy/delete_privacy_policy/{{privacy_policy_uuid}}"
+  headers:
+    - name: Authorization
+      value: Bearer {{staff_token}}
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

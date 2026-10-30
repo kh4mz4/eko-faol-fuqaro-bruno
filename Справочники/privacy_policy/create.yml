@@ -1,0 +1,43 @@
+info:
+  name: create
+  type: http
+  seq: 1
+
+http:
+  method: PATCH
+  url: "{{base_url}}/directory/web/privacy_policy/update_privacy_policy{{faq_uuid}}"
+  headers:
+    - name: Authorization
+      value: Bearer {{staff_token}}
+  body:
+    type: multipart-form
+    data:
+      - name: title_uz
+        type: text
+        value: str
+      - name: title_ru
+        type: text
+        value: str
+      - name: title_crl
+        type: text
+        value: str
+      - name: description_uz
+        type: text
+        value: str
+      - name: description_ru
+        type: text
+        value: str
+      - name: description_crl
+        type: text
+        value: str
+      - name: is_active
+        type: text
+        value: "true"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
