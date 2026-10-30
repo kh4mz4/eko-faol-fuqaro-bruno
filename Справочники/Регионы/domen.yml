@@ -1,0 +1,19 @@
+info:
+  name: domen
+  type: http
+  seq: 4
+
+http:
+  method: DELETE
+  url: "{{base_url}}/directory/web/administrative_unit/delete_administrative_unit/{{administrative_unit_uuid}}"
+  headers:
+    - name: Authorization
+      value: Bearer {{staff_token}}
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

@@ -39,3 +39,6 @@ variables:
   - name: trash_uuid
     value: 01a181fe-1764-7fd4-96ca-fc45cff60461
     description: ""
+  - name: administrative_unit_uuid
+    value: 3fa85f64-5717-4562-b3fc-2c963f66afa6
+    description: ""

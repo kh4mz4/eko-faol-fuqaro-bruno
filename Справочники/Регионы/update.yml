@@ -1,0 +1,37 @@
+info:
+  name: update
+  type: http
+  seq: 3
+
+http:
+  method: PATCH
+  url: "{{base_url}}/directory/web/administrative_unit/update_administrative_unit/{{administrative_unit_uuid}}"
+  headers:
+    - name: Authorization
+      value: Bearer {{staff_token}}
+  body:
+    type: multipart-form
+    data:
+      - name: name_uz
+        type: text
+        value: ""
+      - name: name_ru
+        type: text
+        value: ""
+      - name: name_crl
+        type: text
+        value: ""
+      - name: soato
+        type: text
+        value: ""
+      - name: parent_uuid
+        type: text
+        value: ""
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
