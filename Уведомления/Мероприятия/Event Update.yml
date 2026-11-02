@@ -1,0 +1,104 @@
+info:
+  name: Event Update
+  type: http
+  seq: 4
+
+http:
+  method: PATCH
+  url: "{{baseUrl}}/notification/web/events/update_event/{{uuid}}"
+  headers:
+    - name: Authorization
+      value: Bearer {{staff_token}}
+  body:
+    type: multipart-form
+    data:
+      - name: title_uz
+        type: text
+        value: Ko'chat ekish aksiyasi v3
+        contentType: TEXT
+      - name: title_ru
+        type: text
+        value: Акция по посадке деревьев
+        contentType: TEXT
+      - name: title_crl
+        type: text
+        value: Кўчат экиш акцияси
+        contentType: TEXT
+      - name: description_uz
+        type: text
+        value: Hamma ishtirok etishi mumkin
+        contentType: TEXT
+      - name: description_ru
+        type: text
+        value: Участвовать может каждый.
+        contentType: TEXT
+      - name: description_crl
+        type: text
+        value: Ҳамма иштирок этиши мумкин
+        contentType: TEXT
+      - name: public_date
+        type: text
+        value: 2026-11-01T09:00:00
+        contentType: TEXT
+      - name: start_date
+        type: text
+        value: 2026-11-10T10:00:00
+        contentType: TEXT
+      - name: end_date
+        type: text
+        value: 2026-11-10T13:00:00
+        contentType: TEXT
+      - name: status
+        type: text
+        value: planning
+        contentType: TEXT
+        disabled: true
+      - name: status
+        type: text
+        value: active
+        contentType: TEXT
+      - name: status
+        type: text
+        value: completed
+        contentType: TEXT
+        disabled: true
+      - name: status
+        type: text
+        value: cancelled
+        contentType: TEXT
+        disabled: true
+      - name: latitude
+        type: text
+        value: "41.311081"
+        contentType: TEXT
+      - name: longitude
+        type: text
+        value: "69.240562"
+        contentType: TEXT
+      - name: image_uz
+        type: file
+        value:
+          - C:\Users\begzo\Downloads\uz.png
+        contentType: image/png
+      - name: image_ru
+        type: file
+        value:
+          - C:\Users\begzo\Downloads\ru.png
+        contentType: image/png
+      - name: image_crl
+        type: file
+        value:
+          - C:\Users\begzo\Downloads\crl.png
+        contentType: image/png
+      - name: is_active
+        type: text
+        value: "false"
+        contentType: TEXT
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

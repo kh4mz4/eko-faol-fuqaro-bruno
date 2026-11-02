@@ -1,0 +1,19 @@
+info:
+  name: Delete News
+  type: http
+  seq: 5
+
+http:
+  method: DELETE
+  url: "{{baseUrl}}/notification/web/news/delete_news/{{uuid}}"
+  headers:
+    - name: Authorization
+      value: " Bearer {{staff_token}}"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

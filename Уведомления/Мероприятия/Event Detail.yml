@@ -1,0 +1,19 @@
+info:
+  name: Event Detail
+  type: http
+  seq: 3
+
+http:
+  method: GET
+  url: "{{baseUrl}}/notification/web/events/get_event/{{uuid}}"
+  headers:
+    - name: Authorization
+      value: Bearer {{staff_token}}
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

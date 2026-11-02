@@ -1,0 +1,65 @@
+info:
+  name: Update News
+  type: http
+  seq: 4
+
+http:
+  method: PATCH
+  url: "{{baseUrl}}/notification/web/news/update_news/{{uuid}}"
+  headers:
+    - name: Authorization
+      value: Bearer {{staff_token}}
+  body:
+    type: multipart-form
+    data:
+      - name: title_uz
+        type: text
+        value: Yangi park ochildi v2
+        contentType: TEXT
+      - name: title_ru
+        type: text
+        value: Открылся новый парк
+        contentType: TEXT
+      - name: title_crl
+        type: text
+        value: Янги парк очилди
+        contentType: TEXT
+      - name: description_uz
+        type: text
+        value: Shahar markazida yangi park ochildi.
+        contentType: TEXT
+      - name: description_ru
+        type: text
+        value: В центре города открылся новый парк.
+        contentType: TEXT
+      - name: description_crl
+        type: text
+        value: Шаҳар марказида янги парк очилди.
+        contentType: TEXT
+      - name: public_date
+        type: text
+        value: 2026-11-05T09:00:00+00:00
+        contentType: TEXT
+      - name: image_uz
+        type: file
+        value:
+          - C:\Users\begzo\Downloads\uz.png
+        contentType: image/png
+      - name: image_ru
+        type: file
+        value:
+          - C:\Users\begzo\Downloads\ru.png
+        contentType: image/png
+      - name: image_crl
+        type: file
+        value:
+          - C:\Users\begzo\Downloads\crl.png
+        contentType: image/png
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

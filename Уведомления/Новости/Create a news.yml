@@ -1,0 +1,79 @@
+info:
+  name: Create a news
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{baseUrl}}/notification/web/news/create_news"
+  headers:
+    - name: Authorization
+      value: Bearer {{staff_token}}
+  body:
+    type: multipart-form
+    data:
+      - name: title_uz
+        type: text
+        value: Yangi ekologik loyiha
+        contentType: Text
+      - name: title_ru
+        type: text
+        value: Новый экологический проект
+        contentType: Text
+      - name: title_crl
+        type: text
+        value: Янги экологик лойиҳа
+        contentType: Text
+      - name: description_uz
+        type: text
+        value: Ekologiyani asrash bo‘yicha yangi loyiha boshlandi.
+        contentType: Text
+      - name: description_ru
+        type: text
+        value: Начался новый проект по защите экологии.
+        contentType: Text
+      - name: description_crl
+        type: text
+        value: Экологияни асраш бўйича янги лойиҳа бошланди.
+        contentType: Text
+      - name: public_date
+        type: text
+        value: 2026-11-03T09:00:00+05:00
+        contentType: Text
+      - name: image_uz
+        type: file
+        value:
+          - C:\Users\begzo\Downloads\uz.png
+        contentType: image/png
+      - name: image_ru
+        type: file
+        value:
+          - C:\Users\begzo\Downloads\ru.png
+        contentType: image/png
+      - name: image_crl
+        type: file
+        value:
+          - C:\Users\begzo\Downloads\crl.png
+        contentType: image/png
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
+
+docs: |-
+  Create a news article with titles and descriptions in Uzbek (`uz`), Russian (`ru`) and Uzbek Cyrillic (`crl`).
+
+  Clients are notified by push once `public_date` is reached: set it to the current time (or the past) to publish immediately, or to a future time to schedule the news.
+
+  **Request:** `multipart/form-data`.
+
+  - Required: `title_uz`, `title_ru`, `title_crl` (must not be blank), `description_uz`, `description_ru`, `description_crl`, `public_date` (ISO 8601 datetime **with a UTC offset**, e.g. `2026-11-05T09:00:00+00:00`; a datetime without an offset is rejected with 422).
+  - Optional: `image_uz`, `image_ru`, `image_crl` files. Images (optional, one per language): JPEG, PNG or WEBP, at most 5 MB and 6000x6000 px, not animated. Uploaded images are re-encoded by the server.
+
+  **Response:** the created news (staff view). The new news starts with status `new`.
+
+  **Authentication:** staff session token in the `Authorization` header. The token is validated by staff-service, and the staff member must be permitted to call this endpoint.
