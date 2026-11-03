@@ -1,0 +1,54 @@
+info:
+  name: SMS Campaign
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{baseUrl}}/notification/web/sms_campaign/create_sms_campaign"
+  headers:
+    - name: Authorization
+      value: Bearer {{staff_token}}
+  body:
+    type: multipart-form
+    data:
+      - name: text_uz
+        type: text
+        value: Test
+        contentType: TEXT
+      - name: text_ru
+        type: text
+        value: Тест
+        contentType: TEXT
+      - name: text_crl
+        type: text
+        value: Тест
+        contentType: TEXT
+      - name: description_uz
+        type: text
+        value: O'zbekcha izoh
+        contentType: TEXT
+      - name: description_ru
+        type: text
+        value: Русское описание
+        contentType: TEXT
+      - name: description_crl
+        type: text
+        value: Изоҳ
+        contentType: TEXT
+      - name: scheduled_at
+        type: text
+        value: 2026-12-01T09:00:00+05:00
+        contentType: TEXT
+      - name: recipients
+        type: text
+        value: "[]"
+        contentType: TEXT
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
