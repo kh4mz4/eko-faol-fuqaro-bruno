@@ -1,0 +1,46 @@
+info:
+  name: Update SMS Campaign
+  type: http
+  seq: 4
+
+http:
+  method: PATCH
+  url: "{{baseUrl}}/notification/web/sms_campaign/update_sms_campaign/{{uuid}}"
+  headers:
+    - name: Authorization
+      value: Bearer {{staff_token}}
+  body:
+    type: multipart-form
+    data:
+      - name: text_uz
+        type: text
+        value: Yangilangan matn
+      - name: text_ru
+        type: text
+        value: Обновлённый текст
+      - name: text_crl
+        type: text
+        value: Янгиланган матн
+      - name: scheduled_at
+        type: text
+        value: 2026-12-01T09:00:00+05:00
+      - name: recipients
+        type: text
+        value: "[]"
+      - name: description_uz
+        type: text
+        value: O'zbekcha izoh
+      - name: description_ru
+        type: text
+        value: Русское описание
+      - name: description_crl
+        type: text
+        value: Изоҳ
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
